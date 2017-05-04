@@ -21,8 +21,8 @@ if ( ! defined( 'BUDDY_L2F_PLUGINS_PATH' ) ) {
 	define( 'BUDDY_L2F_PLUGINS_PATH',  plugin_dir_path( __FILE__ ) );
 }
 
-require_once plugin_dir_path( __FILE__ ) . 'source/class-like-source.php';
-require_once plugin_dir_path( __FILE__ ) . 'source/admin/class-l2f-settings.php';
+require_once plugin_dir_path( __FILE__ ) . 'class-like-source.php';
+require_once plugin_dir_path( __FILE__ ) . 'admin/class-l2f-settings.php';
 
 $instance = L2f_Admin_Settings::get_instance();
 $instance = L2f_Like_Source::get_instance();
