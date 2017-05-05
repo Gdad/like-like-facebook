@@ -1,0 +1,13 @@
+.l2f_reaction .hidden{
+    display: none;
+}
+.l2f_reaction ul.expression-lists{
+    list-style: none;
+    margin: auto;
+}
+
+ul.expression-lists li {
+    margin-right: 10px;
+    display: inline-block;
+    display: inline-block;
+}
