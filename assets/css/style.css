@@ -1,6 +1,3 @@
-.l2f_reaction .hidden{
-    display: none;
-}
 .l2f_reaction ul.expression-lists{
     list-style: none;
     margin: auto;
@@ -10,4 +7,35 @@ ul.expression-lists li {
     margin-right: 10px;
     display: inline-block;
     display: inline-block;
+}
+
+.different_reaction_btn{
+    position: relative;
+}
+
+.expression-lists {
+    position: absolute;
+    visibility: hidden;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    transition: opacity .6s;
+    bottom: 100%;
+}
+
+.different_reaction_btn:hover .expression-lists{
+    visibility: visible;
+}
+
+
+.expression-lists::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
