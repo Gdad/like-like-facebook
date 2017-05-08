@@ -37,14 +37,14 @@ class L2f_Like_Source {
      * Function to add script.
      */
     function l2f_add_scipts(){
-        wp_register_script('l2f-script', plugin_dir_url(__FILE__).'assets/js/script.js', array ('jquery'), false);
+        wp_enqueue_script('l2f-script', plugin_dir_url(__FILE__).'assets/js/script.js', array ('jquery'), false);
     }
 
     /**
      * Function to add style.
      */
     function l2f_add_style(){
-        wp_register_style('l2f-style', plugin_dir_url(__FILE__).'assets/css/style.css');
+        wp_enqueue_style('l2f-style', plugin_dir_url(__FILE__).'assets/css/style.css');
     }
 	/**
 	 * Function to print like button like Facebook.
@@ -52,9 +52,6 @@ class L2f_Like_Source {
 	function l2f_add_like_btn( $content ) {
 	    if(is_single()):
             ob_start();
-            wp_enqueue_script( 'l2f-script' );
-            wp_enqueue_style( 'l2f-style' );
-
             $class = apply_filters( 'llf_add_btn_class','l2f_fb_like' );?>
             <div class='<?php echo esc_html( $class );?>'>
                 <div class='different_reaction_btn l2f_reaction'>
@@ -68,8 +65,8 @@ class L2f_Like_Source {
                             echo "</ul>";
                         }
                     ?>
+                    <a href='#' class='l2f_fb_like_link'>Like</a>
                 </div>
-                <a href='#' class='l2f_fb_like_link'>Like</a>
             </div>
             <?php
             $content .= ob_get_contents();
