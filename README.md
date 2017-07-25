@@ -7,3 +7,6 @@ Wordpress Plugin to create a Like post plugin by extending Facebook like feature
 * Shortcode to extend fb-like functionality for other plugins.
 
 ![alt](https://github.com/buddydevelopers/like-like-facebook/blob/master/fb%20copy.png)
+
+
+# :construction: Work in Progress Not yet completed
